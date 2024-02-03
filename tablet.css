@@ -1,0 +1,75 @@
+
+
+    #section-principal{
+        position: relative;
+    }
+    .icon-image {
+        width: 28vw;
+        height: 17vh;
+    }
+    
+    #button-inicio{
+        position: relative;
+        bottom: 54px;
+        left: -36rem;
+        width: 23vw;
+        height: 14vh;
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+    }
+    
+    /*Barra lateral de opciones   ======================================================================>*/
+    
+    .barra-botones{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 74vh;
+        width: 10vw;
+        justify-content: space-around;
+        padding-left: 39px;
+        
+    }
+    
+    .img-background{
+        position: absolute;
+        bottom: 98px;
+        height: 85vh;
+        width: 41vw;
+        margin-left: 79rem;
+    }
+    
+    /*Seccion de contenidos     ======================================================================>*/
+    
+    #sections{
+        position: relative;
+        bottom: 72px;
+    }
+    
+    .imageBack{
+        
+        height: 75vh;
+        width: 54vw;
+        padding-bottom: 15px;
+    } 
+    
+    .button-inicio {
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+        height: 90px;
+    }
+    
+    /*Contenedor Inicial ============================================================================>*/
+    .contenedor-inicial{
+        position: relative;
+        
+        margin-left: 12%;
+    }
+    
+    /*Contenedor Amarillo ============================================================================>*/
+    /*Contenedor Rojo ============================================================================>*/
+    /*Contenedor Azul ============================================================================>*/
+    /*Contenedor Verde ============================================================================>*/
+    

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Rubik+Dirt&family=Rubik+Moonrocks&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+    width: 100vw;
+}
+/*Barra Inicio    ======================================================================>
+
+
+
+ #section-principal{
+    position: relative;
+}
+.icon-image {
+    width: 70vw;
+    height: 27vh;
+}
+
+#button-inicio{
+    position: relative;
+    bottom: 202px;
+    width: 37vw;
+    height: 14vh;
+    background-color: transparent;
+   border: 0cap;
+    font-size: 0cap;
+}*/
+
+/*Barra lateral de opciones   ======================================================================>
+
+.barra-botones{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    width: 10.4vw;
+    justify-content: space-around;
+    padding-left: 49px;
+    
+}
+
+.img-background{
+    position: absolute;
+    bottom: 100px;
+    padding-left:67%;
+    height: 90vh;
+    width: 100vw;
+}*/
+
+/*Seccion de contenidos     ======================================================================>
+
+#sections{
+    position: relative;
+    bottom: 184px;
+}
+
+.imageBack{
+    
+    height: 75vh;
+    width: 54vw;
+    padding-bottom: 15px;
+} 
+
+.button-inicio {
+    background-color: transparent;
+    /*border: 0cap;
+    font-size: 0cap;
+    height: 90px;
+}*/
+
+/*Contenedor Inicial ============================================================================>
+.contenedor-inicial{
+    position: relative;
+    bottom: 660px;
+    margin-left: 12%;
+}*/
+
+/*Contenedor Amarillo ============================================================================>*/
+/*Contenedor Rojo ============================================================================>*/
+/*Contenedor Azul ============================================================================>*/
+/*Contenedor Verde ============================================================================>*/
+
+
+
+

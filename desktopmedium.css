@@ -1,0 +1,105 @@
+    #section-principal{
+        position: relative;
+    }
+    .icon-image {
+        width: 38vw;
+        height: 27vh;
+    }
+    
+    #button-inicio{
+        position: relative;
+        bottom: 94px;
+        width: 32vw;
+        height: 15vh;
+        left: -55rem;
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+    }
+    
+    /*Barra lateral de opciones   ======================================================================>*/
+    #section-initial{
+        width: 90vw;
+        height: 72vh;
+    }
+    .barra-botones{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 10.4vw;
+        justify-content: space-around;
+        padding-left: 49px;
+        
+    }
+    
+    .img-background{
+        position: absolute;
+        bottom: 392px;
+        height: 46vh;
+        width: 19vw;
+        margin-left: 81%;
+    }
+    
+    /*Seccion de contenidos     ======================================================================>*/
+    
+    #sections{
+        position: relative;
+        bottom: 76px;
+    }
+    
+    .imageBack{
+        
+        height: 75vh;
+        width: 54vw;
+        padding-bottom: 15px;
+    } 
+    
+    .button-inicio {
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+        height: 90px;
+    }
+
+    .freelance-image{
+        position: absolute;
+        height: 50vh;
+        width: 40vw;
+        margin-left: 60%;
+        margin-top: 23%;
+        
+    }
+
+    .raiz-image{
+        position: absolute;
+        height: 102vh;
+        width: 41vw;
+        margin-left: -1%;
+        margin-top: -1%;
+        
+    }
+    
+    /*Contenedor Inicial ============================================================================>*/
+    .contenedor-inicial{
+        position: relative;
+        bottom: 546px;
+        margin-left: 16%;
+    }
+    
+    /*Contenedor Amarillo ============================================================================>*/
+    #section-amarillo{
+        height: 50vh;
+        width: 50vw;
+    }
+    .contenedor-amarillo{
+        position: relative;
+        bottom: 353px;
+        margin-left: 55%;
+        
+    }
+
+    /*Contenedor Rojo ============================================================================>*/
+    /*Contenedor Azul ============================================================================>*/
+    /*Contenedor Verde ============================================================================>*/
+    

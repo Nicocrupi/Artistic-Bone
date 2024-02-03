@@ -1,0 +1,92 @@
+    #section-principal{
+        position: relative;
+    }
+    .icon-image {
+        width: 38vw;
+        height: 27vh;
+    }
+    
+    #button-inicio{
+        position: relative;
+        bottom: 142px;
+        width: 31vw;
+        height: 14vh;
+        left: -36%;
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+    }
+
+    .freelance-image{
+        position: absolute;
+        height: 50vh;
+        width: 40vw;
+        margin-left: 60%;
+        margin-top: 24%;
+        
+    }
+    
+    .raiz-image{
+        position: absolute;
+        height: 102vh;
+        width: 41vw;
+        margin-left: -1%;
+        margin-top: -20%;
+        
+    }
+    /*Barra lateral de opciones   ======================================================================>*/
+    #section-initial{
+        width: 90vw;
+        height: 72vh;
+    }
+    .barra-botones{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 10.4vw;
+        justify-content: space-around;
+        padding-left: 49px;
+        
+    }
+    
+    .img-background{
+        position: absolute;
+        bottom: 509px;
+        height: 52vh;
+        width: 19vw;
+    }
+    
+    /*Seccion de contenidos     ======================================================================>*/
+    
+    #sections{
+        position: relative;
+        bottom: 113px;
+    }
+    
+    .imageBack{
+        
+        height: 75vh;
+        width: 54vw;
+        padding-bottom: 11px;
+    } 
+    
+    .button-inicio {
+        background-color: transparent;
+        /*border: 0cap;
+        font-size: 0cap;*/
+        height: 90px;
+    }
+    
+    /*Contenedor Inicial ============================================================================>*/
+    .contenedor-inicial{
+        position: relative;
+        bottom: 781px;
+        margin-left: 17%;
+    }
+    
+    /*Contenedor Amarillo ============================================================================>*/
+    /*Contenedor Rojo ============================================================================>*/
+    /*Contenedor Azul ============================================================================>*/
+    /*Contenedor Verde ============================================================================>*/
+    
