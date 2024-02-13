@@ -19,10 +19,11 @@
 
     .freelance-image{
         position: absolute;
-        height: 50vh;
-        width: 40vw;
-        margin-left: 60%;
-        margin-top: 24%;
+        position: absolute;
+        height: 49vh;
+        width: 49vw;
+        margin-left: -4%;
+        margin-top: 15%;
         
     }
     
@@ -31,7 +32,7 @@
         height: 102vh;
         width: 41vw;
         margin-left: -1%;
-        margin-top: -1%;
+        margin-top: -2%;
         
     }
     /*Barra lateral de opciones   ======================================================================>*/
