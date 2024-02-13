@@ -19,11 +19,10 @@
 
     .freelance-image{
         position: absolute;
-        position: absolute;
         height: 49vh;
         width: 49vw;
         margin-left: -4%;
-        margin-top: 15%;
+        margin-top: 14%;
         
     }
     
@@ -44,11 +43,45 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        height: 75vh;
-        width: 10.4vw;
-        justify-content: space-around;
-        padding-left: 49px;
+        height: 71vh;
+        width: 12.4vw;
+        justify-content: space-between;
+        padding-left: 27px;
+        margin-top: 3%;
         
+    }
+
+    #button-amarillo{
+        position: absolute;
+        height: 4rem;
+        width: 20rem;
+        margin-top: 1%;
+        left: 27%;
+        top: 9%;
+    }
+
+    #button-rojo{
+        position: absolute;
+        height: 4rem;
+        width: 19.4rem;
+        margin-top: 107%;
+        left: 7%;
+    }
+
+    #button-azul{
+        position: absolute;
+        height: 4rem;
+        width: 20rem;
+        margin-top: 182%;
+        left: 27%;
+    }
+
+    #button-verde{
+        position: absolute;
+        height: 4rem;
+        width: 20rem;
+        margin-top: 257%;
+        left: 10%;
     }
     
     .img-background{
