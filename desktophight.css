@@ -43,7 +43,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        height: 71vh;
+        height: 68vh;
         width: 12.4vw;
         justify-content: space-between;
         padding-left: 27px;
@@ -108,8 +108,8 @@
     .button-inicio {
         background-color: transparent;
         /*border: 0cap;
-        font-size: 0cap;*/
-        height: 90px;
+        font-size: 0cap;
+        height: 90px;*/
     }
     
     /*Contenedor Inicial ============================================================================>*/
@@ -120,7 +120,59 @@
     }
     
     /*Contenedor Amarillo ============================================================================>*/
+    #section-amarillo{
+        height: 50vh;
+        width: 50vw;
+    }
+    .contenedor-amarillo{
+        position: relative;
+        bottom: 353px;
+        margin-left: 55%;
+        
+    }
     /*Contenedor Rojo ============================================================================>*/
+    #section-rojo{
+        height: 50vh;
+        width: 50vw;
+    }
+    .contenedor-gallery{
+        position: relative;
+        bottom: 81rem;
+        left: 27%;
+        height: 75rem;
+        width: 145rem;
+    }
+    #gallery{
+        display: flex;
+        overflow: auto;
+        height: 58rem;
+        width: 83rem;
+        position: relative;
+        bottom: -17rem;
+        left: 3rem;
+        
+    }
+
+    .items{
+        height: 45rem;
+        width: 83rem;
+    }
+
+    #gallery-videos{
+        overflow: auto;
+        height: 101rem;
+        width: 60rem;
+        bottom: 81rem;
+        left: 60%;
+        position: relative;
+    }
+
+    .videos{
+        height: 16rem;
+        width: 19rem;
+    }
+
+
     /*Contenedor Azul ============================================================================>*/
     /*Contenedor Verde ============================================================================>*/
     
