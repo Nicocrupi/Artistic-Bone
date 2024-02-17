@@ -2,16 +2,18 @@
         position: relative;
     }
     .icon-image {
-        width: 38vw;
-        height: 27vh;
+        width: 50vw;
+        height: 37vh;
+        left: 25rem;
+        position: relative;
     }
     
     #button-inicio{
         position: relative;
-        bottom: 142px;
-        width: 31vw;
+        bottom: 19rem;
+        width: 36vw;
         height: 14vh;
-        left: -36%;
+        left: -33%;
         background-color: transparent;
         /*border: 0cap;
         font-size: 0cap;*/
@@ -95,7 +97,7 @@
     
     #sections{
         position: relative;
-        bottom: 113px;
+        bottom: 21rem;
     }
     
     .imageBack{
@@ -115,8 +117,9 @@
     /*Contenedor Inicial ============================================================================>*/
     .contenedor-inicial{
         position: relative;
-        bottom: 781px;
-        margin-left: 17%;
+        bottom: 71rem;
+        left: 4%;
+        font-size: 2.3rem;
     }
     
     /*Contenedor Amarillo ============================================================================>*/
@@ -126,14 +129,56 @@
     }
     .contenedor-amarillo{
         position: relative;
-        bottom: 353px;
-        margin-left: 55%;
+        bottom: 94rem;
+        left: -26%;
+        height: 1rem;
         
     }
+
+    .icons-redes{
+        position: relative;
+        bottom: 7rem;
+        left: 35rem;
+        height: 85rem;
+        width: 110rem;
+    }
+
+    .boton-W {
+        position: relative;
+        bottom: 40rem;
+        left: 123rem;
+        height: 9rem;
+        width: 22rem;
+        background: transparent;
+        /*border: none;*/
+    }
+
+    .boton-W:hover {
+        position: relative;
+        bottom: 39.4rem;
+        left: 63rem;
+        height: 8rem;
+        width: 65rem;
+        background-color: black;
+        /* border: none; */
+        border-radius: 8rem;
+    }
+
+
+    
     /*Contenedor Rojo ============================================================================>*/
     #section-rojo{
         height: 50vh;
         width: 50vw;
+    }
+
+    .texto-rojo{
+        position: relative;
+        bottom: -40rem;
+        height: 14rem;
+        width: 25rem; 
+        font-size: 5rem;
+        left: 2%;
     }
     .contenedor-gallery{
         position: relative;
@@ -145,31 +190,31 @@
     #gallery{
         display: flex;
         overflow: auto;
-        height: 58rem;
-        width: 83rem;
+        height: 39rem;
+        width: 52rem;
         position: relative;
-        bottom: -17rem;
-        left: 3rem;
+        bottom: -8rem;
+        left: 27rem;
         
     }
 
     .items{
-        height: 45rem;
-        width: 83rem;
+        height: 27rem;
+        width: 52rem;
     }
 
     #gallery-videos{
         overflow: auto;
-        height: 101rem;
-        width: 60rem;
-        bottom: 81rem;
-        left: 60%;
+        height: 76rem;
+        width: 64rem;
+        bottom: 60rem;
+        left: 61%;
         position: relative;
     }
 
     .videos{
-        height: 16rem;
-        width: 19rem;
+        height: 38rem;
+        width: 62rem;
     }
 
 
