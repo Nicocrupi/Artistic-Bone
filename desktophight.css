@@ -10,10 +10,10 @@
     
     #button-inicio{
         position: relative;
-        bottom: 19rem;
+        bottom: 18rem;
         width: 36vw;
-        height: 14vh;
-        left: -33%;
+        height: 15vh;
+        left: -31.7%;
         background-color: transparent;
         /*border: 0cap;
         font-size: 0cap;*/
@@ -56,7 +56,7 @@
     #button-amarillo{
         position: absolute;
         height: 4rem;
-        width: 20rem;
+        width: 18rem;
         margin-top: 1%;
         left: 27%;
         top: 9%;
@@ -65,7 +65,7 @@
     #button-rojo{
         position: absolute;
         height: 4rem;
-        width: 19.4rem;
+        width: 17.4rem;
         margin-top: 107%;
         left: 7%;
     }
@@ -73,7 +73,7 @@
     #button-azul{
         position: absolute;
         height: 4rem;
-        width: 20rem;
+        width: 18rem;
         margin-top: 182%;
         left: 27%;
     }
@@ -81,7 +81,7 @@
     #button-verde{
         position: absolute;
         height: 4rem;
-        width: 20rem;
+        width: 18rem;
         margin-top: 257%;
         left: 10%;
     }
@@ -117,7 +117,7 @@
     /*Contenedor Inicial ============================================================================>*/
     .contenedor-inicial{
         position: relative;
-        bottom: 71rem;
+        bottom: 65rem;
         left: 4%;
         font-size: 2.3rem;
     }
@@ -135,29 +135,29 @@
         
     }
 
-    .icons-redes{
+    .icon-w{
         position: relative;
-        bottom: 7rem;
-        left: 35rem;
-        height: 85rem;
-        width: 110rem;
+        bottom: -70rem;
+        left: 20rem;
+        height: 13rem;
+        width: 19rem;
+    }
+
+    .boton-W {
+        /*position: relative;
+        bottom: -3.4rem;
+        left: 93rem;
+        height: 6rem;
+        width: 15rem;
+        background: transparent;
+        border: none;*/
     }
 
     .boton-W {
         position: relative;
-        bottom: 40rem;
-        left: 123rem;
+        bottom: -58.8rem;
+        left: -2rem;
         height: 9rem;
-        width: 22rem;
-        background: transparent;
-        /*border: none;*/
-    }
-
-    .boton-W:hover {
-        position: relative;
-        bottom: 39.4rem;
-        left: 63rem;
-        height: 8rem;
         width: 65rem;
         background-color: black;
         /* border: none; */
