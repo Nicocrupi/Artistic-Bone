@@ -5,6 +5,7 @@ const buttonVerde = document.getElementById("button-verde")
 const buttonInicio = document.getElementById("button-inicio")
 
 
+
 const sectionAmarillo = document.getElementById("section-amarillo")
 const sectionRojo = document.getElementById("section-rojo")
 const sectionAzul = document.getElementById("section-azul")
@@ -17,6 +18,7 @@ buttonRojo.addEventListener("click", activeSectionRojo)
 buttonAzul.addEventListener("click", activeSectionArtistas)
 buttonVerde.addEventListener("click", activeSectionProyectos)
 buttonInicio.addEventListener("click", activeSectionInicio)
+
 
 function iniciarPage(){
     sectionAmarillo.style.display = "none"
@@ -36,6 +38,7 @@ function activeSectionInicio(){
     console.log("Todo ok en Inicio")
 }
 function activeSectionAmarillo(){
+    iconOnW.style.display = "none"
     sectionInitial.style.display = "none"
     sectionRojo.style.display = "none"
     sectionAzul.style.display = "none"
@@ -70,4 +73,5 @@ function activeSectionProyectos(){
     sectionVerde.style.display = "block"
     console.log("Todo ok en Proyectos")
 }
+
 window.addEventListener("load", iniciarPage)
