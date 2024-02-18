@@ -2,15 +2,17 @@
         position: relative;
     }
     .icon-image {
+        position: relative;
+        bottom: 8rem;
         width: 50vw;
         height: 37vh;
         left: 25rem;
-        position: relative;
+        
     }
     
     #button-inicio{
         position: relative;
-        bottom: 18rem;
+        bottom: 26rem;
         width: 36vw;
         height: 15vh;
         left: -31.7%;
@@ -38,6 +40,7 @@
     }
     /*Barra lateral de opciones   ======================================================================>*/
     #section-initial{
+        position: relative;
         width: 90vw;
         height: 72vh;
     }
@@ -49,7 +52,7 @@
         width: 12.4vw;
         justify-content: space-between;
         padding-left: 27px;
-        margin-top: 3%;
+        margin-top: -67.5rem;
         
     }
 
@@ -101,7 +104,8 @@
     }
     
     .imageBack{
-        
+        position: relative;
+        bottom: 4rem;
         height: 75vh;
         width: 54vw;
         padding-bottom: 11px;
@@ -115,30 +119,36 @@
     }
     
     /*Contenedor Inicial ============================================================================>*/
+
+    #section-inicial{
+        height: 50vh;
+        width: 50vw;
+    }
+
     .contenedor-inicial{
         position: relative;
-        bottom: 65rem;
+        bottom: 75rem;
         left: 4%;
         font-size: 2.3rem;
     }
     
     /*Contenedor Amarillo ============================================================================>*/
     #section-amarillo{
-        height: 50vh;
+        height: 72vh;
         width: 50vw;
     }
     .contenedor-amarillo{
         position: relative;
-        bottom: 94rem;
-        left: -26%;
-        height: 1rem;
+        bottom: 75rem;
+        left: 4%;
+        font-size: 2.3rem;
         
     }
 
     .icon-w{
         position: relative;
-        bottom: -70rem;
-        left: 20rem;
+        bottom: -44rem;
+        left: -2rem;
         height: 13rem;
         width: 19rem;
     }
@@ -168,7 +178,7 @@
     
     /*Contenedor Rojo ============================================================================>*/
     #section-rojo{
-        height: 50vh;
+        height: 72vh;
         width: 50vw;
     }
 
@@ -182,10 +192,10 @@
     }
     .contenedor-gallery{
         position: relative;
-        bottom: 81rem;
+        bottom: 69rem;
         left: 27%;
-        height: 75rem;
-        width: 145rem;
+        height: 57rem;
+        width: 143rem;
     }
     #gallery{
         display: flex;
@@ -219,5 +229,13 @@
 
 
     /*Contenedor Azul ============================================================================>*/
+    #section-azul{
+        height: 72vh;
+        width: 50vw;
+    }
     /*Contenedor Verde ============================================================================>*/
+    #section-verde{
+        height: 72vh;
+        width: 50vw;
+    }
     
