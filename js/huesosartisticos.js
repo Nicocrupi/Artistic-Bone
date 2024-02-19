@@ -12,6 +12,7 @@ const sectionAzul = document.getElementById("section-azul")
 const sectionVerde = document.getElementById("section-verde")
 const sectionPrincipal = document.getElementById("section-principal")
 const sectionInitial = document.getElementById("section-initial")
+const sectionLoading = document.getElementById("loading")
 
 buttonAmarillo.addEventListener("click", activeSectionAmarillo)
 buttonRojo.addEventListener("click", activeSectionRojo)
@@ -21,6 +22,7 @@ buttonInicio.addEventListener("click", activeSectionInicio)
 
 
 function iniciarPage(){
+sectionLoading.style.display = "none"
     sectionAmarillo.style.display = "none"
     sectionRojo.style.display = "none"
     sectionAzul.style.display = "none"
