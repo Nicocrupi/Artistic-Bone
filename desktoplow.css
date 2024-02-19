@@ -137,23 +137,24 @@
     font-size: 2.3rem;
     
 }
-#section-w{
+#section-y{
     position: absolute;
-    bottom: -36rem;
-    left: 14rem;
+    bottom: -26rem;
+    left: 38rem;
     height: 17rem;
-    width: 54rem;
-}
-#boton-wOn {
-    position: relative;
-    bottom: -5rem;
-    left: 0rem;
-    height: 7.2rem;
     width: 17rem;
+}
+    
+#boton-yOn {
+    position: relative;
+    bottom: -2rem;
+    left: 3rem;
+    height: 13.2rem;
+    width: 10.8rem;
     background: transparent;
     border: white;
 }
-#boton-wX {
+#boton-yBack {
     position: absolute;
     bottom: 18rem;
     left: 0rem;
@@ -162,22 +163,127 @@
     background: transparent;
     border: black;
 }
-    #icon-Off-W{
-        position: absolute;
-        bottom: 2rem;
-        left: 0rem;
-    }
-    #icon-On-W{
-        position: absolute;
-        bottom: 1rem;
-        left: 0rem;
-    }
+#icon-Off-Y{
+    position: absolute;
+    bottom: 2rem;
+    left: 0rem;
+}
+#icon-On-Y{
+    position: absolute;
+    bottom: 1rem;
+    left: -23.3rem;
+}
+#section-w{
+    position: absolute;
+    bottom: -6rem;
+    left: 67rem;
+    height: 17rem;
+    width: 17rem;
+}
+#boton-wOn {
+    position: relative;
+    bottom: -2rem;
+    left: 3rem;
+    height: 13.2rem;
+    width: 10.8rem;
+    background: transparent;
+    border: white;
+}
+#boton-wBack {
+    position: absolute;
+    bottom: 18rem;
+    left: 0rem;
+    height: 7.2rem;
+    width: 17rem;
+    background: transparent;
+    border: black;
+}
+#icon-Off-W{
+    position: absolute;
+    bottom: 2rem;
+    left: 0rem;
+}
+#icon-On-W{
+    position: absolute;
+    bottom: 1rem;
+    left: -23.5rem;
+}
+#section-f{
+    position: absolute;
+    bottom: -48rem;
+    left: 66rem;
+    height: 17rem;
+    width: 17rem
+}
+#boton-fOn {
+    position: relative;
+    bottom: -2rem;
+    left: 3rem;
+    height: 13.2rem;
+    width: 10.8rem;
+    background: transparent;
+    border: white;
+}
+#boton-fBack {
+    position: absolute;
+    bottom: 18rem;
+    left: 0rem;
+    height: 7.2rem;
+    width: 17rem;
+    background: transparent;
+    border: black;
+}
+#icon-Off-F{
+    position: absolute;
+    bottom: 2rem;
+    left: 0rem;
+}
+#icon-On-F{
+    position: absolute;
+    bottom: 1rem;
+    left: -23.3rem;
+}
+#section-m{
+    position: absolute;
+    bottom: -48rem;
+    left: 16rem;
+    height: 17rem;
+    width: 17rem;
+}
+#boton-mOn {
+    position: relative;
+    bottom: -2rem;
+    left: 3rem;
+    height: 13.2rem;
+    width: 10.8rem;
+    background: transparent;
+    border: white;
+}
+#boton-mBack {
+    position: absolute;
+    bottom: 18rem;
+    left: 0rem;
+    height: 7.2rem;
+    width: 17rem;
+    background: transparent;
+    border: black;
+}
+#icon-Off-M{
+    position: absolute;
+    bottom: 2rem;
+    left: 0rem;
+}
+#icon-On-M{
+    position: absolute;
+    bottom: 1rem;
+    left: -24rem;
+}
     /*Contenedor Rojo ============================================================================>*/
-    #section-rojo{
+#section-rojo{
         height: 1rem;
         width: 50vw;
     }
-    .texto-rojo{
+.texto-rojo{
         position: relative;
         bottom: -28rem;
         height: 14rem;
@@ -185,14 +291,14 @@
         font-size: 5rem;
         left: -1%;
     }
-    .contenedor-gallery{
+.contenedor-gallery{
         position: relative;
         bottom: 50rem;
         left: 27%;
         height: 50rem;
         width: 105rem;
     }
-    #gallery{
+#gallery{
         display: flex;
         overflow: auto;
         height: 24rem;
@@ -203,12 +309,12 @@
         
     }
 
-    .items{
+.items{
         height: 22rem;
         width: 42rem;
     }
 
-    #gallery-videos{
+#gallery-videos{
         overflow: auto;
         height: 53rem;
         width: 44rem;
@@ -217,16 +323,16 @@
         position: relative;
     }
 
-    .videos{
+.videos{
         height: 34rem;
         width: 42rem;
     }
     /*Contenedor Azul ============================================================================>*/
-    #section-azul{
+#section-azul{
         height: 1rem;
         width: 50vw;
     }
-    .contenedor-azul{
+.contenedor-azul{
         position: relative;
         bottom: 47rem;
         left: 23rem;
@@ -234,11 +340,11 @@
         
     }
     /*Contenedor Verde ============================================================================>*/
-    #section-verde{
+#section-verde{
         height: 1rem;
         width: 50vw;
     }
-    .contenedor-verde{
+.contenedor-verde{
         position: relative;
         bottom: 47rem;
         left: 23rem;
