@@ -19,6 +19,12 @@
     /*border: 0cap;
     font-size: 0cap;*/
 }
+#loading{
+    position: relative;
+    bottom: 33rem;
+    width: 100vw;
+    height: 105vh;
+}
 
 /*Barra lateral de opciones   ======================================================================>*/
 #section-initial{
