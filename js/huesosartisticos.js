@@ -22,7 +22,7 @@ buttonInicio.addEventListener("click", activeSectionInicio)
 
 
 function iniciarPage(){
-sectionLoading.style.display = "none"
+    sectionLoading.style.display = "none"
     sectionAmarillo.style.display = "none"
     sectionRojo.style.display = "none"
     sectionAzul.style.display = "none"
