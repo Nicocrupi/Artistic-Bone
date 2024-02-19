@@ -39,6 +39,13 @@ function activeSectionInicio(){
 }
 function activeSectionAmarillo(){
     iconOnW.style.display = "none"
+    iconOnY.style.display = "none"
+    iconOnF.style.display = "none"
+    iconOnM.style.display = "none"
+    iconOffW.style.display = "block"
+    iconOffY.style.display = "block"
+    iconOffF.style.display = "block"
+    iconOffM.style.display = "block"
     sectionInitial.style.display = "none"
     sectionRojo.style.display = "none"
     sectionAzul.style.display = "none"
