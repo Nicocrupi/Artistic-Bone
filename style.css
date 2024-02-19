@@ -44,10 +44,10 @@
 
 #button-amarillo{
     position: absolute;
-    height: 3.9rem;
+    height: 4.3rem;
     width: 4.6rem;
     left: 0rem;
-    top: 0.7rem;
+    top: 0.8rem;
 }
 
 #button-rojo{
@@ -55,23 +55,23 @@
     height: 4.4rem;
     width: 4.6rem;
     left: -3rem;
-    top: 7.5rem;
+    top: 8.3rem;
 }
 
 #button-azul{
     position: relative;
     height: 4.3rem;
     width: 4.6rem;
-    left: -1.5rem;
-    top: 0.8rem;
+    left: -1.9rem;
+    top: 1.2rem;
 }
 
 #button-verde{
     position: relative;
     height: 4.2rem;
     width: 5rem;
-    left: -3rem;
-    top: -5.1rem;
+    left: -3.3rem;
+    top: -5.7rem;
 }
 
 .img-background{
@@ -79,7 +79,7 @@
     bottom: 36rem;
     height: 20vh;
     width: 20vw;
-    left: 19.5rem;
+    left: 20.1rem;
 }
 
 /*Seccion de contenidos     ======================================================================>*/
@@ -92,7 +92,7 @@
 .imageBack{
     position: relative;
     height: 60vh;
-    width: 103vw;
+    width: 98vw;
     bottom: 1rem;
     left: -1.5rem;
 } 
@@ -135,7 +135,7 @@
     bottom: -3rem;
     left: 1.5rem;
     height: 33rem;
-    width: 18rem;
+    width: 15em;
     font-size: 1rem;
 }
 
