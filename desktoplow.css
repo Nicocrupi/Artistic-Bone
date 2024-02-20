@@ -177,12 +177,16 @@
 #icon-Off-Y{
     position: absolute;
     bottom: 2rem;
-    left: 0rem;
+    left: 0.4rem;
+    height: 7rem;
+    width: 10rem;
 }
 #icon-On-Y{
     position: absolute;
     bottom: 1rem;
-    left: -14.5rem;;
+    left: -14.8rem;
+    height: 12rem;
+    width: 41rem;
 }
 #section-w{
     position: absolute;
@@ -212,17 +216,21 @@
 #icon-Off-W{
     position: absolute;
     bottom: 2rem;
-    left: 0rem;
+    left: 0.4rem;
+    height: 7rem;
+    width: 10rem;
 }
 #icon-On-W{
     position: absolute;
     bottom: 1rem;
-    left: -14.5rem;;
+    left: -14.8rem;
+    height: 12rem;
+    width: 41rem;
 }
 #section-f{
     position: absolute;
     bottom: -39rem;
-    left: 34rem;
+    left: 31rem;
     height: 11rem;
     width: 11rem;
 }
@@ -247,12 +255,16 @@
 #icon-Off-F{
     position: absolute;
     bottom: 2rem;
-    left: 0rem;
+    left: 0.4rem;
+    height: 7rem;
+    width: 10rem;
 }
 #icon-On-F{
     position: absolute;
     bottom: 1rem;
-    left: -14.5rem;;
+    left: -14.8rem;
+    height: 12rem;
+    width: 41rem;
 }
 #section-m{
     position: absolute;
@@ -282,12 +294,16 @@
 #icon-Off-M{
     position: absolute;
     bottom: 2rem;
-    left: 0rem;
+    left: 0.4rem;
+    height: 7rem;
+    width: 10rem;
 }
 #icon-On-M{
     position: absolute;
     bottom: 1rem;
-    left: -14.5rem;;
+    left: -14.8rem;
+    height: 12rem;
+    width: 41rem;
 }
     /*Contenedor Rojo ============================================================================>*/
 #section-rojo{
