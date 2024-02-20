@@ -102,18 +102,7 @@
     /*border: 0cap;
     font-size: 0cap;*/
     height: 90px;
-}
-
-.freelance-image{
-    position: absolute;
-    height: 50vh;
-    width: 40vw;
-    bottom: -51rem;
-    left: 79rem;
-    
-}
-
-.raiz-image{
+}.raiz-image{
     position: absolute;
     height: 102.4vh;
     bottom: 0rem;
@@ -365,6 +354,14 @@
         font-size: 2.3rem;
         
     }
+.freelance-image{
+    position: absolute;
+    height: 50vh;
+    width: 40vw;
+    bottom: -51rem;
+    left: 79rem;
+    
+}
 
 
 

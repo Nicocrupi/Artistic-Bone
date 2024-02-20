@@ -22,9 +22,9 @@
 #loading{
     position: relative;
     left: -1rem;
-    bottom: 26rem;
+    bottom: 44rem;
     width: 104vw;
-    height: 111vh;
+    height: 113vh;
 }
 
 /*Barra lateral de opciones   ======================================================================>*/
@@ -86,6 +86,9 @@
 #sections{
     position: relative;
     bottom: 10rem;
+    left: 1rem;
+    height: 54vh;
+    width: 75vw;
 }
 
 .imageBack{
@@ -100,24 +103,13 @@
     /*border: 0cap;
     font-size: 0cap;*/
     height: 90px;
-}
-
-.freelance-image{
-    position: absolute;
-    height: 50vh;
-    width: 40vw;
-    bottom: -51rem;
-    left: 79rem;
-    
-}
-
-.raiz-image{
+}.raiz-image{
     position: absolute;
     height: 101.4vh;
     width: 41vw;
     margin-left: -1%;
     margin-top: -1%;
-    
+
 }
 
 /*Contenedor Inicial ============================================================================>*/
@@ -134,6 +126,14 @@
     height: 12rem;
     width: 41em;
     font-size: 1.4rem;
+}
+.texto-inicial-1{
+    bottom: 11rem;
+    left: -8.5rem;
+    height: 12rem;
+    width: 41em;
+    font-size: 1.4rem;
+    position: relative;
 }
 
 /*Contenedor Amarillo ============================================================================>*/
@@ -296,18 +296,18 @@
     }
 .texto-rojo{
     position: relative;
-    bottom: 0rem;
-    height: 14rem;
-    width: 25rem;
+    bottom: 5rem;
+    height: 7rem;
+    width: 27rem;
     font-size: 3rem;
     left: 42%;
     }
 .contenedor-gallery{
     position: relative;
-    bottom: 44rem;
+    bottom: 39rem;
     left: 27%;
-    height: 38rem;
-    width: 71rem;
+    height: 24rem;
+    width: 70rem;
     }
 #gallery{
     display: flex;
@@ -321,45 +321,76 @@
     }
 
 .items{
-        height: 15rem;
-        width: 27rem;
+    height: 15rem;
+    width: 27rem;
     }
 
 #gallery-videos{
-        overflow: auto;
-        height: 29rem;
-        width: 39rem;
-        bottom: 27rem;
-        left: 32rem;
-        position: relative;
-    }
-
-.videos{
-        height: 34rem;
-        width: 42rem;
+    overflow: auto;
+    height: 29rem;
+    width: 39rem;
+    bottom: 27rem;
+    left: 32rem;
+    position: relative;
+}.videos{
+    height: 34rem;
+    width: 38rem;
     }
     /*Contenedor Azul ============================================================================>*/
 #section-azul{
-        height: 1rem;
-        width: 50vw;
+    height: 1rem;
+    width: 50vw;
     }
 .contenedor-azul{
-        position: relative;
-        bottom: 47rem;
-        left: 23rem;
-        font-size: 2.3rem;
+    position: relative;
+    bottom: 0rem;
+    left: 0rem;
+    font-size: 2.3rem;
+    height: 32rem;
         
     }
+.parrafo-azul{
+    position: relative;
+    bottom: 27rem;
+    left: 24rem;
+}
     /*Contenedor Verde ============================================================================>*/
 #section-verde{
-        height: 1rem;
-        width: 50vw;
+    height: 1rem;
+    width: 50vw;
     }
 .contenedor-verde{
-        position: relative;
-        bottom: 47rem;
-        left: 23rem;
-        font-size: 2.3rem;
-        
+    position: relative;
+    bottom: 0rem;
+    left: 0rem;
+    font-size: 2.3rem;
+    height: 32rem;
     }
+#section-artists{
+    position: relative;
+    bottom: 29rem;
+    left: 22rem;
+    height: 24rem;
+    width: 58rem;
+}
+.nombre{
+    position: relative;
+    bottom: 0rem;
+    left: 0rem;
+    font-size: 3rem;
+}
+.cargo{
+    position: relative;
+    bottom: 3.2rem;
+    left: 4rem;
+    font-size: 2rem;
+    width: 30rem;
+}
+.freelance-image{
+    position: absolute;
+    height: 50vh;
+    width: 40vw;
+    bottom: -2rem;
+    left: 26rem;
+}
     
