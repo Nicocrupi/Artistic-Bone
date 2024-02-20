@@ -11,10 +11,10 @@
 
 #button-inicio{
     position: relative;
-    bottom: 12rem;
+    bottom: 11rem;
     width: 32vw;
     height: 15vh;
-    left: -29rem;
+    left: -28rem;
     background-color: transparent;
     /*border: 0cap;
     font-size: 0cap;*/
@@ -43,34 +43,34 @@
 
 #button-amarillo{
     position: absolute;
-    height: 2rem;
-    width: 8rem;
+    height: 1.8rem;
+    width: 7.4rem;
     left: 1.3rem;
-    top: 4rem;
+    top: 3.8rem;
 }
 
 #button-rojo{
     position: absolute;
-    height: 2rem;
-    width: 8rem;
+    height: 1.7rem;
+    width: 7.5rem;
     left: -0.7rem;
-    top: 12.6rem;
+    top: 12rem;
 }
 
 #button-azul{
     position: absolute;
     height: 2rem;
-    width: 8rem;
+    width: 7.7rem;
     left: 1.3rem;
-    top: 20.6rem;
+    top: 19.6rem;
 }
 
 #button-verde{
     position: absolute;
     height: 2rem;
-    width: 8rem;
-    left: -0.7rem;
-    top: 29.2rem;
+    width: 7.6rem;
+    left: -0.5rem;
+    top: 27.5rem;
 }
 
 .img-background{
@@ -78,7 +78,7 @@
     bottom: 26rem;
     height: 40vh;
     width: 14vw;
-    left: -6.6rem;
+    left: -8.6rem;
 }
 
 /*Seccion de contenidos     ======================================================================>*/
@@ -143,7 +143,7 @@
 }
 .contenedor-amarillo{
     position: relative;
-    bottom: 47rem;
+    bottom: 44rem;
     left: 23rem;
     font-size: 2.3rem;
     
@@ -307,7 +307,7 @@
     bottom: 39rem;
     left: 27%;
     height: 24rem;
-    width: 70rem;
+    width: 67rem;
     }
 #gallery{
     display: flex;
@@ -328,13 +328,13 @@
 #gallery-videos{
     overflow: auto;
     height: 29rem;
-    width: 39rem;
-    bottom: 27rem;
+    width: 37rem;
+    bottom: 28rem;
     left: 32rem;
     position: relative;
 }.videos{
-    height: 34rem;
-    width: 38rem;
+    height: 20rem;
+    width: 36rem;
     }
     /*Contenedor Azul ============================================================================>*/
 #section-azul{
@@ -390,7 +390,7 @@
     position: absolute;
     height: 50vh;
     width: 40vw;
-    bottom: -2rem;
-    left: 26rem;
+    bottom: -1rem;
+    left: 24rem;
 }
     
