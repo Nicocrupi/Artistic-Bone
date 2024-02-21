@@ -130,7 +130,7 @@
 }
 .texto-inicial-1 {
     position: relative;
-    bottom: -2rem;
+    bottom: -5rem;
     left: 1.5rem;
     height: 9rem;
     width: 15em;
@@ -144,8 +144,8 @@
 }
 .contenedor-amarillo{
     position: relative;
-    bottom: 42rem;
-    left: -7rem;
+    bottom: 45rem;
+    left: -9rem;
     font-size: 2.3rem;
     
 }
@@ -368,12 +368,13 @@
         }
     .parrafo-azul{
         position: relative;
-        bottom: 22rem;
-        left: 10rem;
+        bottom: 25rem;
+        left: 9rem;
+        font-size: 2.5rem;
     }
     .parrafo-azul-1{
         position: relative;
-        bottom: 17rem;
+        bottom: 19rem;
         left: 6rem;
         font-size: 1rem;
     }
@@ -410,8 +411,8 @@
     }
     .cargo{
         position: relative;
-        bottom: 3.2rem;
-        left: 4rem;
+        bottom: 0.2rem;
+        left: 2rem;
         font-size: 2rem;
         width: 12rem;
     }
@@ -419,7 +420,7 @@
         position: absolute;
         height: 35vh;
         width: 55vw;
-        bottom: 0.5rem;
+        bottom: -9.5rem;
         left: 2.7rem;
     }
 
