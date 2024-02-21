@@ -116,9 +116,9 @@
 .contenedor-inicial{
     position: relative;
     bottom: 31rem;
-    left: 5rem;
+    left: 7rem;
     height: 36rem;
-    width: 19rem;
+    width: 16rem;
 }
 .texto-inicial {
     position: relative;
@@ -368,13 +368,14 @@
         }
     .parrafo-azul{
         position: relative;
-        bottom: 25rem;
-        left: 9rem;
-        font-size: 2.5rem;
+        bottom: 23rem;
+        left: 11rem;
+        width: 10rem;
+        font-size: 1.7rem;
     }
     .parrafo-azul-1{
         position: relative;
-        bottom: 19rem;
+        bottom: 16rem;
         left: 6rem;
         font-size: 1rem;
     }
