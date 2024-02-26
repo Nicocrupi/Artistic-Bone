@@ -98,7 +98,7 @@
     .img-background{
         position: absolute;
         bottom: 29rem;
-        left: 17.8rem;
+        left: 17.6rem;
         height: 52vh;
         width: 19vw;
     }
@@ -165,7 +165,7 @@
     .contenedor-amarillo{
         position: relative;
         bottom: 75rem;
-        left: 4%;
+        left: 60%;
         font-size: 2.3rem;
         
     }
