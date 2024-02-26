@@ -20,6 +20,13 @@
         /*border: 0cap;
         font-size: 0cap;*/
     }
+#loading{
+    position: relative;
+    left: -1rem;
+    bottom: 60rem;
+    width: 104vw;
+    height: 113vh;
+}
 
     .freelance-image{
         position: absolute;
