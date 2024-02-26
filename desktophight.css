@@ -2,21 +2,21 @@
         position: relative;
     }
     .icon-image {
-        position: relative;
-        bottom: 8rem;
-        width: 50vw;
-        height: 37vh;
-        left: 25rem;
+    position: relative;
+    bottom: 3rem;
+    width: 43vw;
+    height: 35vh;
+    left: 13rem;
         
     }
     
     #button-inicio{
-        position: relative;
-        bottom: 26rem;
-        width: 36vw;
-        height: 15vh;
-        left: -31.7%;
-        background-color: transparent;
+    position: relative;
+    bottom: 13rem;
+    width: 31vw;
+    height: 14vh;
+    left: -27.7%;
+    background-color: transparent;
         /*border: 0cap;
         font-size: 0cap;*/
     }
@@ -32,10 +32,10 @@
     
     .raiz-image{
         position: absolute;
-        height: 102vh;
-        width: 41vw;
-        margin-left: -1%;
-        margin-top: -2%;
+        height: 103vh;
+        width: 45vw;
+        bottom: 0.4rem;
+        left: -8rem;
         
     }
     /*Barra lateral de opciones   ======================================================================>*/
@@ -51,47 +51,47 @@
         height: 68vh;
         width: 12.4vw;
         justify-content: space-between;
-        padding-left: 27px;
-        margin-top: -67.5rem;
+        padding-left: 1rem;
+        margin-top: -39.5rem;
         
     }
 
     #button-amarillo{
         position: absolute;
-        height: 4rem;
-        width: 18rem;
-        margin-top: 1%;
-        left: 27%;
-        top: 9%;
+        height: 3rem;
+        width: 11rem;
+        left: 16%;
+        top: 7%;
     }
 
     #button-rojo{
         position: absolute;
-        height: 4rem;
-        width: 17.4rem;
-        margin-top: 107%;
-        left: 7%;
+        height: 3rem;
+        width: 11rem;
+        top: 36%;
+        left: -2%;
     }
 
     #button-azul{
         position: absolute;
-        height: 4rem;
-        width: 18rem;
-        margin-top: 182%;
-        left: 27%;
+        height: 3rem;
+        width: 11rem;
+        left: 16%;
+        top: 64%;
     }
 
     #button-verde{
         position: absolute;
-        height: 4rem;
-        width: 18rem;
-        margin-top: 257%;
-        left: 10%;
+        height: 3rem;
+        width: 11rem;
+        left: 0%;
+        top: 92%;
     }
     
     .img-background{
         position: absolute;
-        bottom: 509px;
+        bottom: 29rem;
+        left: -0.2rem;
         height: 52vh;
         width: 19vw;
     }
@@ -100,12 +100,13 @@
     
     #sections{
         position: relative;
-        bottom: 21rem;
+        bottom: 12rem;
+        left: 0rem;
     }
     
     .imageBack{
         position: relative;
-        bottom: 4rem;
+        bottom: 1rem;
         height: 75vh;
         width: 54vw;
         padding-bottom: 11px;
@@ -131,6 +132,23 @@
         left: 4%;
         font-size: 2.3rem;
     }
+
+    .texto-inicial{
+        bottom: -33rem;
+        left: -1.5rem;
+        height: 12rem;
+        width: 41em;
+        font-size: 1.4rem;
+    }
+
+    .texto-inicial-1{
+    bottom: -29rem;
+    left: -1.5rem;
+    height: 12rem;
+    width: 41em;
+    font-size: 1.4rem;
+    position: relative;
+    }
     
     /*Contenedor Amarillo ============================================================================>*/
     #section-amarillo{
@@ -145,33 +163,162 @@
         
     }
 
-    .icon-w{
-        position: relative;
-        bottom: -44rem;
-        left: -2rem;
-        height: 13rem;
-        width: 19rem;
+    #section-y{
+        position: absolute;
+        bottom: -34rem;
+        left: 48rem;
+        height: 11rem;
+        width: 11rem;
     }
-
-     /*.boton-W {
-       position: relative;
-        bottom: -3.4rem;
-        left: 93rem;
-        height: 6rem;
-        width: 15rem;
-        background: transparent;
-        border: none;
-    }*/
-
-    .boton-W {
+        
+    #boton-yOn {
         position: relative;
-        bottom: -58.8rem;
-        left: -2rem;
-        height: 9rem;
-        width: 65rem;
-        background-color: black;
-        /* border: none; */
-        border-radius: 8rem;
+        bottom: -1rem;
+        left: 0rem;
+        height: 8.2rem;
+        width: 10.8rem;
+        background: transparent;
+        border: white;
+    }
+    #boton-yBack {
+        position: absolute;
+        bottom: 3.3rem;
+        left: -14rem;
+        height: 3.2rem;
+        width: 6rem;
+        background: transparent;
+        border: black;
+    }
+    #icon-Off-Y{
+        position: absolute;
+        bottom: 2rem;
+        left: 0.4rem;
+        height: 7rem;
+        width: 10rem;
+    }
+    #icon-On-Y{
+        position: absolute;
+        bottom: 1rem;
+        left: -14.8rem;
+        height: 12rem;
+        width: 41rem;
+    }
+    #section-w{
+        position: absolute;
+        bottom: -48rem;
+        left: 9rem;
+        height: 11rem;
+        width: 11rem;
+    }
+    #boton-wOn {
+        position: relative;
+        bottom: -1rem;
+        left: 0rem;
+        height: 8.2rem;
+        width: 10.8rem;
+        background: transparent;
+        border: white;
+    }
+    #boton-wBack {
+        position: absolute;
+        bottom: 3.3rem;
+        left: -14rem;
+        height: 3.2rem;
+        width: 6rem;
+        background: transparent;
+        border: black;
+    }
+    #icon-Off-W{
+        position: absolute;
+        bottom: 2rem;
+        left: 0.4rem;
+        height: 7rem;
+        width: 10rem;
+    }
+    #icon-On-W{
+        position: absolute;
+        bottom: 1rem;
+        left: -14.8rem;
+        height: 12rem;
+        width: 41rem;
+    }
+    #section-f{
+        position: absolute;
+        bottom: -61rem;
+        left: 46rem;
+        height: 11rem;
+        width: 11rem;
+    }
+    #boton-fOn {
+        position: relative;
+        bottom: -1rem;
+        left: 0rem;
+        height: 8.2rem;
+        width: 10.8rem;
+        background: transparent;
+        border: white;
+    }
+    #boton-fBack {
+        position: absolute;
+        bottom: 3.3rem;
+        left: -14rem;
+        height: 3.2rem;
+        width: 6rem;
+        background: transparent;
+        border: black;
+    }
+    #icon-Off-F{
+        position: absolute;
+        bottom: 2rem;
+        left: 0.4rem;
+        height: 7rem;
+        width: 10rem;
+    }
+    #icon-On-F{
+        position: absolute;
+        bottom: 1rem;
+        left: -14.8rem;
+        height: 12rem;
+        width: 41rem;
+    }
+    #section-m{
+        position: absolute;
+        bottom: -71rem;
+        left: -7rem;
+        height: 11rem;
+        width: 11rem;
+    }
+    #boton-mOn {
+        position: relative;
+        bottom: -1rem;
+        left: 0rem;
+        height: 8.2rem;
+        width: 10.8rem;
+        background: transparent;
+        border: white;
+    }
+    #boton-mBack {
+        position: absolute;
+        bottom: 3.3rem;
+        left: -14rem;
+        height: 3.2rem;
+        width: 6rem;
+        background: transparent;
+        border: black;
+    }
+    #icon-Off-M{
+        position: absolute;
+        bottom: 2rem;
+        left: 0.4rem;
+        height: 7rem;
+        width: 10rem;
+    }
+    #icon-On-M{
+        position: absolute;
+        bottom: 1rem;
+        left: -14.8rem;
+        height: 12rem;
+        width: 41rem;
     }
 
 
@@ -192,39 +339,39 @@
     }
     .contenedor-gallery{
         position: relative;
-        bottom: 69rem;
+        bottom: 40rem;
         left: 27%;
-        height: 57rem;
-        width: 143rem;
+        height: 29rem;
+        width: 89rem;
     }
     #gallery{
         display: flex;
         overflow: auto;
-        height: 39rem;
-        width: 52rem;
+        height: 24rem;
+        width: 39rem;
         position: relative;
-        bottom: -8rem;
-        left: 27rem;
+        bottom: -6rem;
+        left: 8rem;
         
     }
 
     .items{
-        height: 27rem;
-        width: 52rem;
+        height: 23rem;
+        width: 39rem;
     }
 
     #gallery-videos{
         overflow: auto;
-        height: 76rem;
-        width: 64rem;
-        bottom: 60rem;
-        left: 61%;
+        height: 48rem;
+        width: 45rem;
+        bottom: 35rem;
+        left: 59%;
         position: relative;
     }
 
     .videos{
-        height: 38rem;
-        width: 62rem;
+        height: 41rem;
+        width: 44rem;
     }
 
 
@@ -233,9 +380,65 @@
         height: 72vh;
         width: 50vw;
     }
+.parrafo-azul{
+    position: relative;
+    bottom: 34rem;
+    left: 33rem;
+}
+.parrafo-azul-1{
+    position: relative;
+    bottom: 27rem;
+    left: 38rem;
+}
+
     /*Contenedor Verde ============================================================================>*/
     #section-verde{
         height: 72vh;
         width: 50vw;
+    }
+
+    .contenedor-verde{
+        position: relative;
+        bottom: 0rem;
+        left: 0rem;
+        font-size: 2.3rem;
+        height: 32rem;
+        }
+    #section-artists{
+        position: relative;
+        bottom: 44rem;
+        left: 29rem;
+        height: 39rem;
+        width: 88rem;
+    }
+    #artista{
+        position: relative;
+        height: 23rem;
+        width: 23rem;
+        bottom: -7rem;
+        left: 3rem;
+    }
+    .nombre{
+        position: relative;
+        bottom: 0rem;
+        left: 0rem;
+        font-size: 3rem;
+        width: 16rem;
+        margin: 1rem;
+    }
+    .cargo{
+        position: relative;
+        bottom: 0em;
+        left: 0rem;
+        font-size: 2rem;
+        width: 30rem;
+        margin: 1rem;
+    }
+    .freelance-image{
+        position: absolute;
+        height: 50vh;
+        width: 40vw;
+        bottom: -12rem;
+        left: 39rem;
     }
     
