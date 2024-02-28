@@ -97,10 +97,10 @@
     
     .img-background{
         position: absolute;
-        bottom: 29rem;
-        left: 17.6rem;
-        height: 52vh;
-        width: 19vw;
+        bottom: 0rem;
+        left: -13.4rem;
+        height: 76vh;
+        width: 42vw;
     }
     
     /*Seccion de contenidos     ======================================================================>*/
@@ -169,6 +169,13 @@
         font-size: 2.3rem;
         
     }
+    #pjSkeletonCell{
+        position: absolute;
+        bottom: -73rem;
+        left: 6.1rem;
+        height: 28rem;
+        width: 28rem;
+    }
 
     #section-y{
         position: absolute;
@@ -177,7 +184,13 @@
         height: 11rem;
         width: 11rem;
     }
-        
+    #pjSkeletonY{
+        position: absolute;
+        bottom: -73rem;
+        left: 6.1rem;
+        height: 28rem;
+        width: 28rem;
+    }    
     #boton-yOn {
         position: relative;
         bottom: -1rem;
@@ -216,6 +229,13 @@
         left: 9rem;
         height: 11rem;
         width: 11rem;
+    }
+    #pjSkeletonW{
+        position: absolute;
+        bottom: -73rem;
+        left: 6.1rem;
+        height: 28rem;
+        width: 28rem;
     }
     #boton-wOn {
         position: relative;
@@ -256,6 +276,13 @@
         height: 11rem;
         width: 11rem;
     }
+    #pjSkeletonF{
+        position: absolute;
+        bottom: -73rem;
+        left: 6.1rem;
+        height: 28rem;
+        width: 28rem;
+    }
     #boton-fOn {
         position: relative;
         bottom: -1rem;
@@ -294,6 +321,13 @@
         left: -7rem;
         height: 11rem;
         width: 11rem;
+    }
+    #pjSkeletonM{
+        position: absolute;
+        bottom: -73rem;
+        left: 6.1rem;
+        height: 28rem;
+        width: 28rem;
     }
     #boton-mOn {
         position: relative;
@@ -397,7 +431,20 @@
     bottom: 27rem;
     left: 38rem;
 }
-
+#pjSkeletonP{
+    position: absolute;
+    bottom: -6rem;
+    left: 61rem;
+    height: 26rem;
+    width: 29rem;
+}
+#logo-BigBike{
+    position: absolute;
+    bottom: 9rem;
+    left: 78rem;
+    height: 30rem;
+    width: 33rem;
+}
     /*Contenedor Verde ============================================================================>*/
     #section-verde{
         height: 72vh;
@@ -448,4 +495,10 @@
         bottom: -12rem;
         left: 39rem;
     }
-    
+    .hat{
+        position: absolute;
+        height: 13rem;
+        width: 19rem;
+        bottom: -3rem;
+        left: 12rem;
+    }

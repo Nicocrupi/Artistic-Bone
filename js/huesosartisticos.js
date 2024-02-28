@@ -40,14 +40,20 @@ function activeSectionInicio(){
     console.log("Todo ok en Inicio")
 }
 function activeSectionAmarillo(){
+    pjSkelM.style.display = "none"
+    pjSkelF.style.display = "none"
+    pjSkelY.style.display = "none"
+    pjSkelW.style.display = "none"
     iconOnW.style.display = "none"
     iconOnY.style.display = "none"
     iconOnF.style.display = "none"
     iconOnM.style.display = "none"
+    pjSkelCell.style.display = "block"
     iconOffW.style.display = "block"
     iconOffY.style.display = "block"
     iconOffF.style.display = "block"
     iconOffM.style.display = "block"
+
     sectionInitial.style.display = "none"
     sectionRojo.style.display = "none"
     sectionAzul.style.display = "none"
