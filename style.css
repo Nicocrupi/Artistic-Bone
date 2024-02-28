@@ -3,16 +3,16 @@
 }
 .icon-image {
     position: relative;
-    width: 98vw;
+    width: 100vw;
     height: 36vh;
     bottom: 4rem;
-    left: -2.8rem;
+    left: -1.8rem;
 }
 
 #button-inicio {
     position: relative;
     bottom: 16rem;
-    width: 69vw;
+    width: 100vw;
     height: 14vh;
     left: 0rem;
     background-color: transparent;
@@ -122,7 +122,7 @@
 }
 .texto-inicial {
     position: relative;
-    bottom: -3rem;
+    bottom: -1rem;
     left: 1.5rem;
     height: 9rem;
     width: 15em;
@@ -130,7 +130,7 @@
 }
 .texto-inicial-1 {
     position: relative;
-    bottom: -5rem;
+    bottom: -1rem;
     left: 1.5rem;
     height: 9rem;
     width: 15em;
@@ -404,14 +404,14 @@
         }
     .parrafo-azul{
         position: relative;
-        bottom: 23rem;
+        bottom: 25rem;
         left: 11rem;
         width: 10rem;
         font-size: 1.7rem;
     }
     .parrafo-azul-1{
         position: relative;
-        bottom: 22rem;
+        bottom: 25rem;
         left: 12rem;
         font-size: 1rem;
     }
