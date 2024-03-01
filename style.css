@@ -16,8 +16,8 @@
     height: 14vh;
     left: 0rem;
     background-color: transparent;
-    /*border: 0cap;
-    font-size: 0cap;*/
+    border: 0cap;
+    font-size: 0cap;
 }
 #loading{
     position: relative;
@@ -100,8 +100,8 @@
 
 .button-inicio {
     background-color: transparent;
-    /*border: 0cap;
-    font-size: 0cap;*/
+    border: 0cap;
+    font-size: 0cap;
     height: 90px;
 }.raiz-image{
     position: absolute;
@@ -141,6 +141,13 @@
 #section-amarillo{
     height: 1rem;
     width: 50vw;
+}
+#parrafo-Amarillo{
+    position: absolute;
+    bottom: -63rem;
+    left: 9.1rem;
+    width: 17rem;
+    font-size: 1rem;
 }
 .contenedor-amarillo{
     position: relative;
@@ -492,14 +499,14 @@ width: 15rem;
     }
     #pjSkeletonP{
         position: absolute;
-        bottom: -4rem;
+        bottom: -9rem;
         left: 5rem;
         height: 12rem;
         width: 13rem;
     }
     #logo-BigBike{
         position: absolute;
-        bottom: 1rem;
+        bottom: -6rem;
         left: 12rem;
         height: 10rem;
         width: 11rem;
@@ -545,8 +552,8 @@ width: 15rem;
     .freelance-image{
         position: absolute;
         height: 35vh;
-        width: 55vw;
-        bottom: -3.5rem;
+        width: 69vw;
+        bottom: -5.5rem;
         left: 0.3rem;
     }
     .hat{
