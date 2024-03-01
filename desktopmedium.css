@@ -143,28 +143,34 @@
 }
 .contenedor-amarillo{
     position: relative;
-    bottom: 44rem;
+    bottom: 41rem;
     left: 22rem;
     font-size: 2.3rem;
     
 }
 #pjSkeletonCell{
     position: absolute;
-    bottom: -42rem;
+    bottom: -39rem;
     left: -8.9rem;
     height: 28rem;
     width: 28rem;
 }
 #section-y{
     position: absolute;
-    bottom: -17rem;
-    left: 35rem;
-    height: 11rem;
-    width: 11rem;
+    bottom: -10rem;
+    left: 39rem;
+    height: 5rem;
+    width: 5rem;
+}
+#link-Y{
+    position: absolute;
+    bottom: 0.6rem;
+    left: 12.1rem;
+    color: transparent;
 }
 #pjSkeletonY{
     position: absolute;
-    bottom: -42rem;
+    bottom: -39rem;
     left: -8.9rem;
     height: 28rem;
     width: 28rem;
@@ -172,173 +178,238 @@
     
 #boton-yOn {
     position: relative;
-    bottom: -1rem;
-    left: 0rem;
-    height: 8.2rem;
-    width: 10.8rem;
+    bottom: 0rem;
+    left: -1rem;
+    height: 5rem;
+    width: 7rem;
     background: transparent;
     border: white;
 }
 #boton-yBack {
     position: absolute;
-    bottom: 3.3rem;
-    left: -14rem;
+    bottom: 0rem;
+    left: -11rem;
     height: 3.2rem;
-    width: 6rem;
+    width: 4rem;
     background: transparent;
     border: black;
 }
 #icon-Off-Y{
     position: absolute;
-    bottom: 2rem;
-    left: 0.4rem;
-    height: 7rem;
-    width: 10rem;
+    bottom: 0rem;
+    left: -0.9rem;
+    height: 5rem;
+    width: 7rem;
 }
 #icon-On-Y{
     position: absolute;
-    bottom: 1rem;
-    left: -14.8rem;
-    height: 12rem;
-    width: 41rem;
+    bottom: -1rem;
+    left: -11.8rem;
+    height: 8rem;
+    width: 29rem;
 }
 #section-w{
     position: absolute;
-    bottom: -26rem;
-    left: 35rem;
-    height: 11rem;
-    width: 11rem;
+    bottom: -17rem;
+    left: 39rem;
+    height: 5rem;
+    width: 5rem;
+}
+#link-W{
+    position: absolute;
+    bottom: 0.6rem;
+    left: 12.1rem;
+    color: transparent;
 }
 #pjSkeletonW{
 position: absolute;
-bottom: -42rem;
+bottom: -39rem;
 left: -8.9rem;
 height: 28rem;
 width: 28rem;
 }
 #boton-wOn {
     position: relative;
-    bottom: -1rem;
-    left: 0rem;
-    height: 8.2rem;
-    width: 10.8rem;
+    bottom: 0rem;
+    left: -1rem;
+    height: 5rem;
+    width: 7rem;
     background: transparent;
     border: white;
 }
 #boton-wBack {
     position: absolute;
-    bottom: 3.3rem;
-    left: -14rem;
+    bottom: 0rem;
+    left: -11rem;
     height: 3.2rem;
-    width: 6rem;
+    width: 4rem;
     background: transparent;
     border: black;
 }
 #icon-Off-W{
     position: absolute;
-    bottom: 2rem;
-    left: 0.4rem;
-    height: 7rem;
-    width: 10rem;
+    bottom: 0rem;
+    left: -0.9rem;
+    height: 5rem;
+    width: 7rem;
 }
 #icon-On-W{
     position: absolute;
-    bottom: 1rem;
-    left: -14.8rem;
-    height: 12rem;
-    width: 41rem;
+    bottom: -1rem;
+    left: -11.8rem;
+    height: 8rem;
+    width: 29rem;
 }
+
 #section-f{
     position: absolute;
-    bottom: -35rem;
-    left: 35rem;
-    height: 11rem;
-    width: 11rem;
+    bottom: -31rem;
+    left: 39rem;
+    height: 5rem;
+    width: 5rem;
+}
+#link-F{
+    position: absolute;
+    bottom: 0.6rem;
+    left: 12.1rem;
+    color: transparent;
 }
 #pjSkeletonF{
     position: absolute;
-    bottom: -42rem;
+    bottom: -39rem;
     left: -8.9rem;
     height: 28rem;
     width: 28rem;
     }
 #boton-fOn {
     position: relative;
-    bottom: -1rem;
-    left: 0rem;
-    height: 8.2rem;
-    width: 10.8rem;
+    bottom: 0rem;
+    left: -1rem;
+    height: 5rem;
+    width: 7rem;
     background: transparent;
     border: white;
 }
 #boton-fBack {
     position: absolute;
-    bottom: 3.3rem;
-    left: -14rem;
+    bottom: 0rem;
+    left: -11rem;
     height: 3.2rem;
-    width: 6rem;
+    width: 4rem;
     background: transparent;
     border: black;
 }
 #icon-Off-F{
     position: absolute;
-    bottom: 2rem;
-    left: 0.4rem;
-    height: 7rem;
-    width: 10rem;
+    bottom: 0rem;
+    left: -0.9rem;
+    height: 5rem;
+    width: 7rem;
 }
 #icon-On-F{
     position: absolute;
-    bottom: 1rem;
-    left: -14.8rem;
-    height: 12rem;
-    width: 41rem;
+    bottom: -1rem;
+    left: -11.8rem;
+    height: 8rem;
+    width: 29rem;
+}
+#section-e{
+    position: absolute;
+    bottom: -24rem;
+    left: 39rem;
+    height: 5rem;
+    width: 5rem;
+}
+#link-E{
+    position: absolute;
+    bottom: 0.6rem;
+    left: 12.1rem;
+    color: transparent;
+}
+#pjSkeletonE{
+position: absolute;
+bottom: -39rem;
+left: -8.9rem;
+height: 28rem;
+width: 28rem;
+}
+#boton-eOn {
+    position: relative;
+    bottom: 0rem;
+    left: -1rem;
+    height: 5rem;
+    width: 7rem;
+    background: transparent;
+    border: white;
+}
+#boton-eBack {
+    position: absolute;
+    bottom: 0rem;
+    left: -11rem;
+    height: 3.2rem;
+    width: 4rem;
+    background: transparent;
+    border: black;
+}
+#icon-Off-E{
+    position: absolute;
+    bottom: 0rem;
+    left: -0.9rem;
+    height: 5rem;
+    width: 7rem;
+}
+#icon-On-E{
+    position: absolute;
+    bottom: -1rem;
+    left: -11.8rem;
+    height: 8rem;
+    width: 29rem;
 }
 #section-m{
     position: absolute;
-    bottom: -45rem;
-    left: 35rem;
-    height: 11rem;
-    width: 11rem;
+    bottom: -38rem;
+    left: 39rem;
+    height: 5rem;
+    width: 5rem;
 }
 #pjSkeletonM{
     position: absolute;
-    bottom: -42rem;
+    bottom: -39rem;
     left: -8.9rem;
     height: 28rem;
     width: 28rem;
     }
 #boton-mOn {
     position: relative;
-    bottom: -1rem;
-    left: 0rem;
-    height: 8.2rem;
-    width: 10.8rem;
+    bottom: 0rem;
+    left: -1rem;
+    height: 5rem;
+    width: 7rem;
     background: transparent;
     border: white;
 }
 #boton-mBack {
     position: absolute;
-    bottom: 3.3rem;
-    left: -14rem;
+    bottom: 0rem;
+    left: -11rem;
     height: 3.2rem;
-    width: 6rem;
+    width: 4rem;
     background: transparent;
     border: black;
 }
 #icon-Off-M{
     position: absolute;
-    bottom: 2rem;
-    left: 0.4rem;
-    height: 7rem;
-    width: 10rem;
+    bottom: 0rem;
+    left: -0.9rem;
+    height: 5rem;
+    width: 7rem;
 }
 #icon-On-M{
     position: absolute;
-    bottom: 1rem;
-    left: -14.8rem;
-    height: 12rem;
-    width: 41rem;
+    bottom: -1rem;
+    left: -11.8rem;
+    height: 8rem;
+    width: 29rem;
 }
     /*Contenedor Rojo ============================================================================>*/
 #section-rojo{
