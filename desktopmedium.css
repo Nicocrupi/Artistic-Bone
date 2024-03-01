@@ -16,8 +16,8 @@
     height: 15vh;
     left: -28rem;
     background-color: transparent;
-    /*border: 0cap;
-    font-size: 0cap;*/
+    border: 0cap;
+    font-size: 0cap;
 }
 #loading{
     position: relative;
@@ -43,34 +43,34 @@
 
 #button-amarillo{
     position: absolute;
-    height: 1.8rem;
+    height: 4.8rem;
     width: 7.4rem;
     left: 1.3rem;
-    top: 3.8rem;
+    top: 0.8rem;
 }
 
 #button-rojo{
     position: absolute;
-    height: 1.7rem;
+    height: 4.8rem;
     width: 7.5rem;
     left: -0.7rem;
-    top: 11.7rem;
+    top: 8.7rem;
 }
 
 #button-azul{
     position: absolute;
-    height: 2rem;
+    height: 4.8rem;
     width: 7.7rem;
     left: 1.3rem;
-    top: 19rem;
+    top: 16rem;
 }
 
 #button-verde{
     position: absolute;
-    height: 2rem;
+    height: 4.8rem;
     width: 7.6rem;
     left: -0.5rem;
-    top: 26.8rem;
+    top: 23.8rem;
 }
 
 .img-background{
@@ -100,8 +100,8 @@
 
 .button-inicio {
     background-color: transparent;
-    /*border: 0cap;
-    font-size: 0cap;*/
+    border: 0cap;
+    font-size: 0cap;
     height: 90px;
 }.raiz-image{
     position: absolute;
@@ -141,6 +141,13 @@
     height: 1rem;
     width: 50vw;
 }
+#parrafo-Amarillo{
+    position: absolute;
+    bottom: -30rem;
+    left: 11.1rem;
+    width: 17rem;
+    font-size: 1.5rem;
+}
 .contenedor-amarillo{
     position: relative;
     bottom: 41rem;
@@ -151,7 +158,7 @@
 #pjSkeletonCell{
     position: absolute;
     bottom: -39rem;
-    left: -8.9rem;
+    left: -16.9rem;
     height: 28rem;
     width: 28rem;
 }
@@ -171,7 +178,7 @@
 #pjSkeletonY{
     position: absolute;
     bottom: -39rem;
-    left: -8.9rem;
+    left: -16.9rem;
     height: 28rem;
     width: 28rem;
 }
@@ -224,7 +231,7 @@
 #pjSkeletonW{
 position: absolute;
 bottom: -39rem;
-left: -8.9rem;
+left: -16.9rem;
 height: 28rem;
 width: 28rem;
 }
@@ -277,7 +284,7 @@ width: 28rem;
 #pjSkeletonF{
     position: absolute;
     bottom: -39rem;
-    left: -8.9rem;
+    left: -16.9rem;
     height: 28rem;
     width: 28rem;
     }
@@ -329,7 +336,7 @@ width: 28rem;
 #pjSkeletonE{
 position: absolute;
 bottom: -39rem;
-left: -8.9rem;
+left: -16.9rem;
 height: 28rem;
 width: 28rem;
 }
@@ -375,7 +382,7 @@ width: 28rem;
 #pjSkeletonM{
     position: absolute;
     bottom: -39rem;
-    left: -8.9rem;
+    left: -16.9rem;
     height: 28rem;
     width: 28rem;
     }
@@ -479,8 +486,8 @@ width: 28rem;
 
 .parrafo-azul-1{
     position: relative;
-    bottom: 22rem;
-    left: 23rem;
+    bottom: 28rem;
+    left: 17rem;
     font-size: 1rem;
 }
 #pjSkeletonP{
