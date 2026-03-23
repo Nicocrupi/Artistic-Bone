@@ -1,194 +1,838 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artistic Bone</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 550px)">
-    <link rel="stylesheet" href="./desktoplow.css" media="screen and (min-width: 1024px)">
-    <link rel="stylesheet" href="./desktopmedium.css" media="screen and (min-width: 1358px)">
-    <link rel="stylesheet" href="./desktophight.css" media="screen and (min-width: 1912px)">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artistic Bone - Portafolio de diseño y desarrollo de Nicolas Cruz">
+  <title>Artistic Bone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --bg-card:   #141414;
+      --bg-hover:  #1c1c1c;
+      --border:    #252525;
+      --text:      #f0ece4;
+      --muted:     #666;
+      --yellow:    #E8C547;
+      --red:       #D94F3D;
+      --blue:      #4A90D9;
+      --green:     #4DBD74;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --radius:    14px;
+      --ease:      cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ─────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    /* ── LOADER ────────────────────────────────── */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s var(--ease);
+    }
+    #loader img { width: 180px; }
+    #loader.hidden { opacity: 0; pointer-events: none; }
+
+    /* ── NAVBAR ────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 64px;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-icon { width: 30px; height: 30px; object-fit: contain; }
+    .nav-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+    .nav-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      padding: 7px 16px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-btn:hover { color: var(--text); background: var(--bg-hover); }
+    .nav-btn.active { color: var(--yellow); }
+
+    #menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* ── SECTIONS ──────────────────────────────── */
+    main { padding-top: 64px; }
+
+    .section {
+      display: none;
+      min-height: calc(100vh - 64px);
+      padding: 4rem 2.5rem 5rem;
+      max-width: 1120px;
+      margin: 0 auto;
+      animation: fadeUp 0.5s var(--ease) both;
+    }
+    .section.active { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTION HEADER ────────────────────────── */
+    .section-header {
+      position: relative;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-bottom: 3.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .section-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 52px;
+      letter-spacing: 4px;
+      line-height: 1;
+      position: relative; z-index: 1;
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      position: relative; z-index: 1;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── HERO ──────────────────────────────────── */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      min-height: calc(100vh - 200px);
+      padding: 2rem 0;
+    }
+    .hero-text { flex: 1; max-width: 540px; }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--yellow);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 99px;
+      margin-bottom: 1.75rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 7vw, 88px);
+      letter-spacing: 3px;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .highlight.yellow { color: var(--yellow); }
+    .highlight.red    { color: var(--red); }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 420px;
+      font-weight: 300;
+    }
+
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #000;
+      border: none;
+      padding: 13px 32px;
+      border-radius: 99px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s var(--ease), background 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .btn-primary:hover { background: #f0ce4a; transform: translateY(-2px); }
+    .btn-primary.small { padding: 9px 22px; font-size: 13px; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 13px 32px;
+      border-radius: 99px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    .hero-image {
+      position: relative;
+      flex: 0 0 auto;
+      width: 360px;
+    }
+    .hero-skeleton {
+      width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 60px rgba(232,197,71,0.12));
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+
+    .bone-dot {
+      position: absolute;
+      border-radius: 50%;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    .dot-y { width:16px; height:16px; background:var(--yellow); top:8%;  right:12%; animation-delay:0s;    }
+    .dot-r { width:12px; height:12px; background:var(--red);    bottom:22%; right:4%;  animation-delay:0.7s;  }
+    .dot-b { width:10px; height:10px; background:var(--blue);   top:42%;  left:2%;   animation-delay:1.4s;  }
+    .dot-g { width:14px; height:14px; background:var(--green);  bottom:8%;  left:12%;  animation-delay:2.1s;  }
+    @keyframes pulse {
+      0%,100% { transform:scale(1);   opacity:1; }
+      50%      { transform:scale(1.5); opacity:0.5; }
+    }
+
+    .skills-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .skill-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      padding: 6px 16px;
+      border-radius: 99px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    /* ── GALLERY ───────────────────────────────── */
+    .gallery-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 13px;
+      padding: 8px 22px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active { background: var(--red); border-color: var(--red); color: #fff; }
+    .tab-btn:hover:not(.active) { border-color: var(--red); color: var(--red); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeUp 0.35s var(--ease) both; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s var(--ease);
+    }
+    .gallery-item:hover { border-color: var(--red); transform: scale(1.03); }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .video-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .video-item:hover { border-color: var(--red); }
+    .video-item video { width:100%; display:block; max-height:200px; object-fit:cover; }
+    .video-item p { padding: 10px 14px; font-size: 13px; color: var(--muted); }
+
+    /* ── PROYECTOS ─────────────────────────────── */
+    .proyectos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .proyecto-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s var(--ease);
+    }
+    .proyecto-card:hover { border-color: var(--blue); transform: translateY(-5px); }
+
+    .proyecto-img {
+      height: 170px;
+      background: var(--bg-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .proyecto-logo { max-height: 100px; max-width: 75%; object-fit: contain; }
+    .plus-icon { font-size: 56px; color: var(--border); font-family: var(--font-display); }
+    .placeholder-img { border: 2px dashed var(--border); background: transparent; }
+
+    .proyecto-info { padding: 1.5rem; }
+    .proyecto-info h3 { font-size: 20px; font-weight: 500; margin-bottom: 8px; }
+    .proyecto-info p { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; font-weight: 300; }
+
+    .proyecto-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      background: rgba(74,144,217,0.12);
+      border: 1px solid rgba(74,144,217,0.25);
+      color: var(--blue);
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+    .tag.wip {
+      background: rgba(232,197,71,0.12);
+      border-color: rgba(232,197,71,0.25);
+      color: var(--yellow);
+    }
+
+    /* ── SOBRE MI ──────────────────────────────── */
+    .sobre-mi-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .sobre-mi-img {
+      flex: 0 0 auto;
+      width: 260px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .freelance-gif { width:100%; display:block; }
+
+    .sobre-mi-text { flex: 1; min-width: 260px; }
+    .sobre-mi-text h3 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+    .sobre-mi-cargo {
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .sobre-mi-desc {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .habilidades { display:flex; flex-direction:column; gap:18px; }
+    .hab-nombre { display:block; font-size:13px; color:var(--muted); margin-bottom:8px; letter-spacing:0.3px; }
+    .hab-bar {
+      height: 3px;
+      background: var(--bg-hover);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .hab-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green) 0%, var(--blue) 100%);
+      border-radius: 99px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.2s var(--ease);
+    }
+    .hab-fill.animated { transform: scaleX(1); }
+
+    /* ── CONTACTO ──────────────────────────────── */
+    .contacto-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .contacto-redes { flex: 1; min-width: 260px; }
+    .contacto-redes h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .redes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .red-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s var(--ease);
+    }
+    .red-card:hover { transform: translateY(-4px); }
+    .red-icon { font-size: 20px; margin-bottom: 6px; }
+    .red-nombre { font-size: 15px; font-weight: 500; color: var(--text); }
+    .red-handle { font-size: 12px; color: var(--muted); }
+
+    .youtube:hover   { border-color: #ff4444; }
+    .whatsapp:hover  { border-color: #25D366; }
+    .email:hover     { border-color: var(--yellow); }
+    .facebook:hover  { border-color: #4e85d4; }
+
+    .contacto-skeleton { flex: 0 0 auto; width: 200px; opacity: 0.65; }
+    .contacto-skeleton img { width: 100%; }
+
+    /* ── FOOTER ────────────────────────────────── */
+    footer {
+      position: relative;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .footer-raiz {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 55%;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+    footer p { position: relative; font-size: 12px; color: var(--muted); letter-spacing: 0.5px; }
+
+    /* ── RESPONSIVE ────────────────────────────── */
+    @media (max-width: 768px) {
+      #navbar { padding: 0 1.25rem; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(10,10,10,0.97);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem;
+        gap: 4px;
+      }
+      .nav-links.open { display: flex; }
+      #menu-toggle { display: flex; align-items: center; justify-content: center; }
+      .section { padding: 2.5rem 1.25rem 4rem; }
+      .hero { flex-direction: column; min-height: auto; }
+      .hero-text h1 { font-size: 52px; }
+      .hero-image { width: 220px; margin: 0 auto; }
+      .sobre-mi-content { flex-direction: column; }
+      .sobre-mi-img { width: 100%; max-width: 260px; }
+      .contacto-content { flex-direction: column; }
+      .contacto-skeleton { display: none; }
+      .redes-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <img class="raiz-image" src="./assets/Raiz.png" alt="RaizError"/> 
 
+  <div id="loader">
+    <img src="./assets/Loading.gif" alt="Cargando...">
+  </div>
 
-    <section id="section-principal">
-        <img class="icon-image" src="./assets/Icon.png" alt="backgroundError"/>
-        <button id="button-inicio" class="titulo-button">inicio</button>
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img src="./assets/Icon2.png" alt="Logo" class="nav-icon">
+      <span class="nav-title">ARTISTIC BONE</span>
+    </div>
+    <ul class="nav-links">
+      <li><button class="nav-btn active" data-section="inicio">Inicio</button></li>
+      <li><button class="nav-btn" data-section="portafolio">Portafolio</button></li>
+      <li><button class="nav-btn" data-section="proyectos">Proyectos</button></li>
+      <li><button class="nav-btn" data-section="sobre-mi">Sobre mí</button></li>
+      <li><button class="nav-btn" data-section="contacto">Contacto</button></li>
+    </ul>
+    <button id="menu-toggle" aria-label="Menú">&#9776;</button>
+  </nav>
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="section active">
+      <div class="hero">
+        <div class="hero-text">
+          <p class="hero-tag">Diseño &amp; Desarrollo</p>
+          <h1>Bienvenido a<br><span class="highlight yellow">ARTISTIC</span><br><span class="highlight red">BONE</span></h1>
+          <p class="hero-desc">Creamos experiencias visuales únicas combinando diseño artístico y desarrollo web. Desde ilustraciones hasta sitios completos.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" data-section="portafolio">Ver portafolio</button>
+            <button class="btn-secondary" data-section="contacto">Contacto</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./assets/PjSkeleton.png" alt="Personaje Artistic Bone" class="hero-skeleton">
+          <div class="bone-dot dot-y"></div>
+          <div class="bone-dot dot-r"></div>
+          <div class="bone-dot dot-b"></div>
+          <div class="bone-dot dot-g"></div>
+        </div>
+      </div>
+      <div class="skills-bar">
+        <span class="skill-tag">HTML &amp; CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Blender 3D</span>
+        <span class="skill-tag">Inkscape</span>
+        <span class="skill-tag">Diseño UI</span>
+        <span class="skill-tag">Animación</span>
+      </div>
     </section>
 
-    
-    
-    <section id="sections">
-    
-        <section id="section-initial">
-
-            <img class="imageBack" src="./assets/ButtonOff.png" alt="Error background section initial">
-
-            <div class="contenedor-inicial">
-                <p class="texto-inicial">
-                    Bienvenidos!! <br>
-                    Artistic Bone es un proyecto creado para mostrar las capacidades
-                    en diseño y desarrollo de los mismos administradores.
-                    Conocenos y Eligenos para compartir tus IDEAS Y PROYECTOS!!.
-                </p>
-                <p class="texto-inicial-1">
-                    Este proyecto se encuentra aun es estado de creación, por lo cual 
-                    encontraras secciones incompletas y falta de información. <br>
-                    Estaremos trabajando para su mayor comodidad y estancia en nuestro sitio web.
-                </p>
-            </div>
-            <img class="img-background" src="/assets/PjSkeleton.png" alt="IconBackground">
-        </section>
-
-        <section id="section-amarillo">
-                    <img class="imageBack" src="./assets/YellowOn.png" alt="Error background section initial">
-                    <div class="contenedor-amarillo">
-                        <section id="section-y">
-                            <img id="icon-Off-Y" src="./assets/SectionContacto/Y-OFF.png" alt="Y-OFF-Error">
-                            <img id="icon-On-Y" src="./assets/SectionContacto/Y-ON.png" alt="Y-ON-Error">
-                            <button id="boton-yOn"></button>
-                            <button id="boton-yBack"></button>
-                            <a id="link-Y" href="https://www.youtube.com/@ArtisticBone24" target="_blank">you</a>
-                        </section>
-                        <section id="section-w">
-                            <img id="icon-Off-W" src="./assets/SectionContacto/W-OFF.png" alt="W-OFF-Error">
-                            <img id="icon-On-W" src="./assets/SectionContacto/W-ON.png" alt="W-ON-Error">
-                            <button id="boton-wOn"></button>
-                            <button id="boton-wBack"></button>
-                            <a id="link-W" href="https://wa.link/f9lgrn" target="_blank">wha</a>
-                        </section>
-                        <section id="section-e">
-                            <img id="icon-Off-E" src="./assets/SectionContacto/E-OFF.png" alt="E-OFF-Error">
-                            <img id="icon-On-E" src="./assets/SectionContacto/E-ON.png" alt="E-ON-Error">
-                            <button id="boton-eOn"></button>
-                            <button id="boton-eBack"></button>
-                            <a id="link-E" href="mailto:artisticbonebusiness@gmail.com" target="_blank">ema</a>
-                        </section>
-                        <section id="section-f">
-                            <img id="icon-Off-F" src="./assets/SectionContacto/F-OFF.png" alt="F-OFF-Error">
-                            <img id="icon-On-F" src="./assets/SectionContacto/F-ON.png" alt="F-ON-Error">
-                            <button id="boton-fOn"></button>
-                            <button id="boton-fBack"></button>
-                            <a id="link-F" href="https://www.facebook.com/profile.php?id=61556627383545" target="_blank">fac</a>
-                        </section>
-                        <section id="section-m">
-                            <img id="icon-Off-M" src="./assets/SectionContacto/M-OFF.png" alt="M-OFF-Error">
-                            <img id="icon-On-M" src="./assets/SectionContacto/M-ON.png" alt="M-ON-Error">
-                            <button id="boton-mOn"></button>
-                            <button id="boton-mBack"></button>
-                        </section>
-
-                        <img id="pjSkeletonW" src="./assets/SectionContacto/PjSkeletonW.png" alt="Error-PjSkeletonW">
-                        <img id="pjSkeletonF" src="./assets/SectionContacto/PjSkeletonF.png" alt="Error-PjSkeletonF">
-                        <img id="pjSkeletonY" src="./assets/SectionContacto/PjSkeletonY.png" alt="Error-PjSkeletonY">
-                        <img id="pjSkeletonM" src="./assets/SectionContacto/PjSkeletonM.png" alt="Error-PjSkeletonM">
-                        <img id="pjSkeletonE" src="./assets/SectionContacto/PjSkeletonE.png" alt="Error-PjSkeletonE">
-                        <img id="pjSkeletonCell" src="./assets/SectionContacto/PjSkeletonCell.png" alt="Error-PjSkeletonCell">
-
-                        <p id="parrafo-Amarillo">
-                            Esperamos de tus comentarios, para nosotros <br>
-                            es muy importante saber tu opinion <br>
-                            <br>
-                            Comparte y ayudanos a crecer!.
-                        </p>
-                    </div>
-            </section>
-
-        <section id="section-rojo">
-           
-                <img class="imageBack" src="./assets/RedOn.png" alt="Error background section initial">
-                <div class="contenedor-gallery">
-                    <div id="gallery">
-                        
-                        <img class="items" src="./assets/Gallery/p0.png" alt="">
-                        <img class="items" src="./assets/Gallery/p1.png" alt="">
-                        <img class="items" src="./assets/Gallery/p2.png" alt="">
-                        <img class="items" src="./assets/Gallery/p3.png" alt="">
-                        <img class="items" src="./assets/Gallery/p4.png" alt="">
-                        <img class="" src="./assets/Gallery/p5.jpg" alt="">
-                        <img class="" src="./assets/Gallery/p6.jpg" alt="">
-                        <img class="items" src="./assets/Gallery/Blander0.png" alt="">
-                        <img class="" src="./assets/Gallery/Blander1.png" alt="">
-                        <img class="items" src="./assets/Gallery/p7.png" alt="">
-                        <img class="items" src="./assets/Gallery/p8.png" alt="">
-                        <img class="items" src="./assets/Gallery/p9.png" alt="">
-                    </div>          
-
-                    <div id="gallery-videos">
-                        <video class="videos" src="./assets/Gallery/Videos/Guard2.mp4" autoplay controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Guard0.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Guard1.mp4"  controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Bon0.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Bon1.mp4#t=03" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Capitan0.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Capitan1.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Capitan2.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/CapitanB0.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/CapitanB1.mp4" controls></video>
-                        <video class="videos" src="./assets/Gallery/Videos/Skellfire0.mp4"  controls></video>
-                        
-                    </div>
-                </div>
-            </section>
-
-        <section id="section-azul">
-            <div class="contenedor-azul">
-                <img class="imageBack" src="./assets/BlueOn.png" alt="Error background section initial">
-
-                <p class="parrafo-azul">
-                    This section is under construction!
-                </p>
-                <p class="parrafo-azul-1">
-                    Realizamos paginas web basicas utilizando <br>
-                    HTML CSS y JS <br>
-                    Manejamos herramientas open source como: <br>
-                    1. Inkscape <br>
-                    2. Blender <br>
-                    <br>
-                    In process . . <br>
-                    <br>
-                    Big Bike  (Taller y Almacen de bicicletas) <br>
-                    Artistic Bone (Empresa de diseño)
-                </p>
-                <img id="pjSkeletonP" src="./assets/PjSkeletonP.png" alt="Error-PjSkeletonP">
-                <img id="logo-BigBike" src="./assets/Proyects/LogoBigBike.png" alt="Error-Logo-Big-Bike">
-            </div>
-            </section>
-
-        <section id="section-verde">
-            <div class="contenedor-verde">
-
-            <img class="imageBack" src="./assets/GreenOn.png" alt="Error background section initial">
-
-                <section id="section-artists">
-                    <section id="artista">
-                        <p class="nombre">Nicolas Cruz</p>
-                        <p class="cargo">Administrador</p>
-                        <img class="freelance-image" src="./assets/Artists/NicolasCruz/Freelance.gif" alt="FreelancerError"/> 
-                        <img class="hat" src="./assets/Artists/NicolasCruz/Hat.png" alt="Error-Hat">
-                    </section>
-                </section>
-
-            </div>
-
-            </section>
-
-                <div class="barra-botones">
-
-                    <button id="button-amarillo" class="button-inicio"></button>
-                    <button id="button-rojo" class="button-inicio"></button>
-                    <button id="button-azul" class="button-inicio"></button>
-                    <button id="button-verde" class="button-inicio"></button>
-            
-                </div>
-
+    <!-- PORTAFOLIO -->
+    <section id="portafolio" class="section">
+      <div class="section-header">
+        <img src="./assets/RedOn.png" alt="" class="section-bg-img">
+        <h2>PORTAFOLIO</h2>
+        <p>Trabajos de diseño e ilustración</p>
+      </div>
+      <div class="gallery-tabs">
+        <button class="tab-btn active" data-tab="imagenes">Ilustraciones</button>
+        <button class="tab-btn" data-tab="videos">Animaciones</button>
+      </div>
+      <div id="tab-imagenes" class="tab-content active">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="./assets/Gallery/p0.png" alt="Trabajo 1" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p1.png" alt="Trabajo 2" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p2.png" alt="Trabajo 3" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p3.png" alt="Trabajo 4" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p4.png" alt="Trabajo 5" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p7.png" alt="Trabajo 6" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p8.png" alt="Trabajo 7" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/p9.png" alt="Trabajo 8" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/Gallery/Blander0.png" alt="Blender" loading="lazy"></div>
+        </div>
+      </div>
+      <div id="tab-videos" class="tab-content">
+        <div class="video-grid">
+          <div class="video-item"><video src="./assets/Gallery/Videos/Guard2.mp4" controls preload="none"></video><p>Guard 2</p></div>
+          <div class="video-item"><video src="./assets/Gallery/Videos/Guard0.mp4" controls preload="none"></video><p>Guard 0</p></div>
+          <div class="video-item"><video src="./assets/Gallery/Videos/Bon0.mp4" controls preload="none"></video><p>Bon 0</p></div>
+          <div class="video-item"><video src="./assets/Gallery/Videos/Capitan0.mp4" controls preload="none"></video><p>Capitán 0</p></div>
+          <div class="video-item"><video src="./assets/Gallery/Videos/Skellfire0.mp4" controls preload="none"></video><p>Skellfire</p></div>
+        </div>
+      </div>
     </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="section-header">
+        <img src="./assets/BlueOn.png" alt="" class="section-bg-img">
+        <h2>PROYECTOS</h2>
+        <p>Sitios desarrollados con HTML, CSS y JavaScript</p>
+      </div>
+      <div class="proyectos-grid">
+        <div class="proyecto-card">
+          <div class="proyecto-img">
+            <img src="./assets/Proyects/LogoBigBike.png" alt="Big Bike" class="proyecto-logo">
+          </div>
+          <div class="proyecto-info">
+            <h3>Big Bike</h3>
+            <p>Sitio web para taller y almacén de bicicletas. Diseño completo con catálogo de productos y sección de contacto.</p>
+            <div class="proyecto-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto-card">
+          <div class="proyecto-img">
+            <img src="./assets/Icon2.png" alt="Artistic Bone" class="proyecto-logo">
+          </div>
+          <div class="proyecto-info">
+            <h3>Artistic Bone</h3>
+            <p>Portafolio personal de diseño y desarrollo. Este mismo sitio, construido desde cero con identidad propia.</p>
+            <div class="proyecto-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+              <span class="tag wip">En proceso</span>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto-card">
+          <div class="proyecto-img placeholder-img">
+            <div class="plus-icon">+</div>
+          </div>
+          <div class="proyecto-info">
+            <h3>Próximo proyecto</h3>
+            <p>¿Tienes un proyecto en mente? Hablemos y lo hacemos realidad juntos.</p>
+            <button class="btn-primary small" data-section="contacto">Contactar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section">
+      <div class="section-header">
+        <img src="./assets/GreenOn.png" alt="" class="section-bg-img">
+        <h2>SOBRE MÍ</h2>
+        <p>Conoce al artista detrás de los huesos</p>
+      </div>
+      <div class="sobre-mi-content">
+        <div class="sobre-mi-img">
+          <img src="./assets/Artists/NicolasCruz/Freelance.gif" alt="Nicolas Cruz" class="freelance-gif">
+        </div>
+        <div class="sobre-mi-text">
+          <h3>NICOLAS CRUZ</h3>
+          <p class="sobre-mi-cargo">Diseñador &amp; Desarrollador</p>
+          <p class="sobre-mi-desc">Apasionado por el diseño digital, la ilustración y el desarrollo web. Trabajo con herramientas open source para crear experiencias visuales únicas que combinan arte y tecnología.</p>
+          <div class="habilidades">
+            <div class="habilidad">
+              <span class="hab-nombre">Diseño UI/UX</span>
+              <div class="hab-bar"><div class="hab-fill" data-width="80"></div></div>
+            </div>
+            <div class="habilidad">
+              <span class="hab-nombre">HTML &amp; CSS</span>
+              <div class="hab-bar"><div class="hab-fill" data-width="85"></div></div>
+            </div>
+            <div class="habilidad">
+              <span class="hab-nombre">JavaScript</span>
+              <div class="hab-bar"><div class="hab-fill" data-width="65"></div></div>
+            </div>
+            <div class="habilidad">
+              <span class="hab-nombre">Blender 3D</span>
+              <div class="hab-bar"><div class="hab-fill" data-width="70"></div></div>
+            </div>
+            <div class="habilidad">
+              <span class="hab-nombre">Inkscape</span>
+              <div class="hab-bar"><div class="hab-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="section-header">
+        <img src="./assets/YellowOn.png" alt="" class="section-bg-img">
+        <h2>CONTACTO</h2>
+        <p>¡Hablemos de tu próximo proyecto!</p>
+      </div>
+      <div class="contacto-content">
+        <div class="contacto-redes">
+          <h3>Encuéntrame en</h3>
+          <div class="redes-grid">
+            <a href="https://www.youtube.com/@ArtisticBone24" target="_blank" class="red-card youtube">
+              <span class="red-icon">▶</span>
+              <span class="red-nombre">YouTube</span>
+              <span class="red-handle">@ArtisticBone24</span>
+            </a>
+            <a href="https://wa.link/f9lgrn" target="_blank" class="red-card whatsapp">
+              <span class="red-icon">💬</span>
+              <span class="red-nombre">WhatsApp</span>
+              <span class="red-handle">Escríbeme</span>
+            </a>
+            <a href="mailto:artisticbonebusiness@gmail.com" class="red-card email">
+              <span class="red-icon">✉</span>
+              <span class="red-nombre">Email</span>
+              <span class="red-handle">artisticbonebusiness</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61556627383545" target="_blank" class="red-card facebook">
+              <span class="red-icon">f</span>
+              <span class="red-nombre">Facebook</span>
+              <span class="red-handle">Artistic Bone</span>
+            </a>
+          </div>
+        </div>
+        <div class="contacto-skeleton">
+          <img src="./assets/PjSkeletonP.png" alt="Personaje contacto">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="./assets/Raiz.png" alt="Raiz" class="footer-raiz">
+    <p>© 2026 Artistic Bone · Nicolas Cruz · Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // LOADER
+      const loader = document.getElementById('loader');
+      window.addEventListener('load', () => {
+        setTimeout(() => loader.classList.add('hidden'), 700);
+      });
+
+      // NAVEGACION
+      const sections = document.querySelectorAll('.section');
+      const allBtns  = document.querySelectorAll('[data-section]');
+
+      function showSection(id) {
+        sections.forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        const target = document.getElementById(id);
+        if (target) {
+          target.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (id === 'sobre-mi') animateBars();
+        }
+        document.querySelectorAll(`.nav-btn[data-section="${id}"]`).forEach(b => b.classList.add('active'));
+        // cerrar menu mobile
+        document.querySelector('.nav-links').classList.remove('open');
+      }
+
+      allBtns.forEach(btn => btn.addEventListener('click', () => showSection(btn.dataset.section)));
+
+      // MENU MOBILE
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('open');
+      });
+
+      // TABS GALERIA
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        });
+      });
+
+      // BARRAS HABILIDADES
+      function animateBars() {
+        document.querySelectorAll('.hab-fill').forEach(fill => {
+          const w = fill.dataset.width;
+          fill.style.width = w + '%';
+          requestAnimationFrame(() => fill.classList.add('animated'));
+        });
+      }
+
+    });
+  </script>
 </body>
-    <img id="loading" src="./assets/Loading.gif" alt="Loading-Gif-Error">
-    <script src="./js/huesosartisticos.js"></script>
-    <script src="./js/botonesredes.js"></script>
 </html>
